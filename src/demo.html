@@ -1,0 +1,45 @@
+<!-- The template to be demonstrated/tested -->
+<script type="text/stache" id="demo" can-autorender>
+  <can-import from="file-droplet" />
+  <can-import from="file-router" />
+
+<style>
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+file-droplet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+</style>
+
+  <!-- This example shows how to use with the file-droplet component, but any array of File objects will work. -->
+  <file-droplet>
+
+    <!-- Route to {page:'upload-photos', section: 'data-entry'} when a list of jpg Files is dropped. -->
+    <!-- Route to {page:'doc-viewer'} when a list of pdf Files is dropped. -->
+    <!-- Route to {page:'file-manager'} when a list of Files with multiple extensions is dropped. -->
+    <file-router {batch}="lastFileBatch"
+        jpg="page='upload-photos', section='data-entry'"
+        pdf="page='doc-viewer'" 
+        multiple="page='file-manager'" >
+    </file-router>
+
+  </file-droplet>
+  
+</script>
+
+<!-- The data for the above template. -->
+<script src='../node_modules/steal/steal.js'
+        main="can/view/autorender/">
+
+  import can from "can";
+  import $ from "jquery";
+
+  $("#demo").viewModel().attr({});
+</script>

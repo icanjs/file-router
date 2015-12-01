@@ -1,0 +1,54 @@
+{
+  "name": "file-router",
+  "version": "0.0.1",
+  "description": "Configure your app to change to specific routes when a batch of files is dropped onto the page.",
+  "main": "src/file-router.js",
+  "scripts": {
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "jshint": "jshint src/file-router.js",
+    "testee": "testee tests/test.html --browsers firefox",
+    "test": "npm run jshint && npm run testee",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://marshallswain@github.com/marshallswain/file-router.git"
+  },
+  "keywords": [
+    "CanJS",
+    "Stache"
+  ],
+  "author": "Marshall Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marshallswain/file-router/issues"
+  },
+  "homepage": "https://github.com/marshallswain/file-router",
+  "system": {
+    "main": "file-router",
+    "npmIgnore": [
+      "documentjs"
+    ],
+    "transpiler": "babel",
+    "directories": {
+      "lib": "src"
+    }
+  },
+  "dependencies": {
+    "can": "*",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "ramda": "^0.18.0",
+    "steal": "^0.12.3",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.12.1",
+    "testee": "^0.2.2"
+  },
+  "jshintConfig": {
+    "esnext": true
+  }
+}

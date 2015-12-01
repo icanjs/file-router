@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/marshallswain/file-router.svg?branch=master)](https://travis-ci.org/marshallswain/file-router)
 [![npm version](https://badge.fury.io/js/file-router.svg)](https://badge.fury.io/js/file-router)
 
-# A CanJS Component that enables live-bound file drag-and-drop-ability to its contents.
-
 [![NPM](https://nodei.co/npm/file-router.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/file-router/)
 
 ## Installation

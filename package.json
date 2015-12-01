@@ -1,6 +1,6 @@
 {
   "name": "file-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Configure your app to change to specific routes when a batch of files is dropped onto the page.",
   "main": "src/file-router.js",
   "scripts": {
